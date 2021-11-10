@@ -23,7 +23,7 @@
 #
 # The builder image will be used to uncompress the tar.gz file with the Java Runtime.
 
-FROM oraclelinux:7-slim as builder
+FROM quay.io/canit0/oraclelinux:7-slim as builder
 
 MAINTAINER Aurelio Garcia-Ribeyro <aurelio.garciaribeyro@oracle.com>
 
@@ -51,7 +51,7 @@ RUN set -eux; \
 	tar --extract --file /tmp/jdk.tgz --directory "$JAVA_HOME" --strip-components 1
 	
 ## Get a fresh version of SLIM for the final image	
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 
 # Default to UTF-8 file.encoding
 ENV LANG en_US.UTF-8

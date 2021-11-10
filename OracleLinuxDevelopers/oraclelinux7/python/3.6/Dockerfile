@@ -1,6 +1,6 @@
 # Copyright (c) 2020 Oracle and/or its affiliates.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 
 RUN yum -y install python3 \
                    python3-libs \

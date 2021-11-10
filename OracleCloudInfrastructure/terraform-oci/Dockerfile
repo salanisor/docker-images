@@ -1,4 +1,4 @@
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 
 ARG TERRAFORM_VERSION
 ARG OCI_PROVIDER_VERSION

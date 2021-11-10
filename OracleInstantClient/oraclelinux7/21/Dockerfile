@@ -69,7 +69,7 @@
 # and can be pulled with:
 #   docker pull ghcr.io/oracle/oraclelinux7-instantclient:21
 
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 
 RUN  yum -y install oracle-instantclient-release-el7 && \
      yum -y install oracle-instantclient-basic oracle-instantclient-devel oracle-instantclient-sqlplus && \
