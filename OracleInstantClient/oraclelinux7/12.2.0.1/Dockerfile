@@ -22,7 +22,7 @@
 #      $ docker run -ti --rm oraclelinux7-instantclient:12.2 sqlplus -l /nolog
 #
 
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 
 ADD oracle-instantclient*.rpm /tmp/
 

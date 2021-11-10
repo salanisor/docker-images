@@ -20,7 +20,7 @@
 #
 # Pull base image
 # ---------------
-FROM oraclelinux:7-slim as base
+FROM quay.io/canit0/oraclelinux:7-slim as base
 
 # Labels
 # ------

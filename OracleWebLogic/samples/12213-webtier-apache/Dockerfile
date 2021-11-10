@@ -19,7 +19,7 @@
 #
 # PULL BASE IMAGE
 # -----------------------------------
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 #Defined ARG Variable VERSION to pass through the value to the environment variables
 ARG VERSION=12.2.1.3.0
 

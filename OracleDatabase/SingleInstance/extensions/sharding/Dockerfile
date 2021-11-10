@@ -22,7 +22,7 @@ ARG BASE_IMAGE=oracle/database:${BASE_IMAGE_VERSION}-ee
 ARG BASE_REPO=https://github.com/oracle/db-sharding
 
 # Creating stage for downloading necessary script files
-FROM oraclelinux:7-slim as downloader
+FROM quay.io/canit0/oraclelinux:7-slim as downloader
 ARG BASE_REPO
 ENV BASE_REPO=$BASE_REPO
 WORKDIR /tmp

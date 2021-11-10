@@ -12,7 +12,7 @@
 #      $ docker run -ti --rm oraclelinux7-instantclient:18 sqlplus -l /nolog
 #
 
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 
 ARG release=18
 ARG update=5

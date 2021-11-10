@@ -21,7 +21,7 @@
 #
 # Pull base image
 # ---------------
-FROM oraclelinux:7-slim
+FROM quay.io/canit0/oraclelinux:7-slim
 
 # Maintainer
 # ----------
