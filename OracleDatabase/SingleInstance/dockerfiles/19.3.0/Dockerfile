@@ -79,11 +79,11 @@ RUN echo "troubleshooting step 2"
 COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CONFIG_RSP $PWD_FILE $CHECK_DB_FILE $USER_SCRIPTS_FILE $RELINK_BINARY_FILE $ORACLE_BASE/
 
 RUN echo "troubleshooting step 3"
-RUN chmod ug+x $INSTALL_DIR/*.sh && \
+RUN chmod ug+x ${INSTALL_DIR}/*.sh && \
     sync && \
-    $INSTALL_DIR/$CHECK_SPACE_FILE && \
-    $INSTALL_DIR/$SETUP_LINUX_FILE && \
-    rm -rf $INSTALL_DIR
+    ${INSTALL_DIR}/${CHECK_SPACE_FILE} && \
+    ${INSTALL_DIR}/${SETUP_LINUX_FILE} && \
+    rm -rf ${INSTALL_DIR}
 
 
 
