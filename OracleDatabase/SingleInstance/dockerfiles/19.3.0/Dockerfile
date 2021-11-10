@@ -95,6 +95,7 @@ FROM base AS builder
 ARG DB_EDITION
 
 # Copy DB install file
+RUN echo "troubleshooting step 1"
 COPY --chown=oracle:dba $INSTALL_FILE_1 $INSTALL_RSP $INSTALL_DB_BINARIES_FILE $INSTALL_DIR/
 
 # Install DB software binaries
