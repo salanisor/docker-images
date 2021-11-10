@@ -73,9 +73,12 @@ ENV PATH=$ORACLE_HOME/bin:$ORACLE_HOME/OPatch/:/usr/sbin:$PATH \
 
 # Copy files needed during both installation and runtime
 # -------------
+RUN echo "troubleshooting step 1"
 COPY $SETUP_LINUX_FILE $CHECK_SPACE_FILE $INSTALL_DIR/
+RUN echo "troubleshooting step 2"
 COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CONFIG_RSP $PWD_FILE $CHECK_DB_FILE $USER_SCRIPTS_FILE $RELINK_BINARY_FILE $ORACLE_BASE/
 
+RUN echo "troubleshooting step 3"
 RUN chmod ug+x $INSTALL_DIR/*.sh && \
     sync && \
     $INSTALL_DIR/$CHECK_SPACE_FILE && \
@@ -95,7 +98,7 @@ FROM base AS builder
 ARG DB_EDITION
 
 # Copy DB install file
-RUN echo "troubleshooting step 1"
+RUN echo "troubleshooting step 4"
 COPY --chown=oracle:dba $INSTALL_FILE_1 $INSTALL_RSP $INSTALL_DB_BINARIES_FILE $INSTALL_DIR/
 
 # Install DB software binaries
